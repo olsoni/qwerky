@@ -1,2 +1,2 @@
-# qwerk
+# qwerky
 A Quirky Custom Keyboard 
