@@ -24,18 +24,18 @@ points:
         ring:
           key:
             stagger: 0.8ky
-            splay: -8
             spread: 1.2kx
+            splay: -8
         middle:
           key:
             stagger: 0.2ky
-            splay: -4
             spread: 1.2kx
+            splay: -4
         index:
           key:
             stagger: -0.2ky
-            splay: -4
             spread: 1.2kx
+            splay: -4
         inner:
           key:
             stagger: -0.0ky
@@ -44,6 +44,78 @@ points:
         bottom:
         home:
         top:
+    thumbtop:
+      key:
+        padding: 1.1ky
+        spread: 1.12kx
+      anchor:
+        ref: matrix_middle_bottom
+        shift: [0.0kx, -1.5ky]
+      columns: 
+        outer:
+          key:
+        middle:
+          key:
+            stagger: -0.1ky
+            splay: -10
+        home:
+          key:
+            stagger: -0.1ky
+            splay: -10
+        inner:
+          key:
+            stagger: -0.1ky
+            splay: -10
+    thumbbot:
+      key:
+        padding: 1.1ky
+        spread: 1.12kx
+      anchor:
+        ref: thumbtop_outer
+        shift: [0.8kx, -1.2ky]
+      columns:
+        outer:
+          key:
+            splay: -10
+        inner:
+          key:
+            stagger: -0.1ky
+            splay: -10
+          
 outlines:
+  board:
+    - what: rectangle
+      where: true
+      size: [kx, ky]
+    - what: polygon
+      operation: stack
+      points: 
+        - ref: matrix_outer_top
+          shift: [-0.6kx, 0.6ky]
+        - ref: matrix_ring_top
+          shift: [-0.6kx, 0.6ky]
+        - ref: matrix_middle_top
+          shift: [-0.6kx, 0.6ky]
+        - ref: matrix_middle_top
+          shift: [0.6kx, 0.6ky]
+        - ref: matrix_index_top
+          shift: [0.6kx, 0.6ky]
+        - ref: matrix_inner_top
+          shift: [1.9kx, 0.6ky]
+        - ref: matrix_inner_top
+          shift: [1.9kx, -3.8ky]
+        - ref: thumbtop_inner
+          shift: [0.6kx, -0.6ky]
+        - ref: thumbbot_inner
+          shift: [0.6kx, -0.6ky]
+        - ref: thumbbot_outer
+          shift: [-0.6kx, -0.6ky]
+        - ref: thumbtop_outer
+          shift: [-0.5kx, -0.6ky]
+        - ref: matrix_pinky_bottom
+          shift: [0.6kx, -0.6ky]
+        - ref: matrix_outer_bottom
+          shift: [-0.6kx, -0.6ky]
+
 pcbs:
 cases:
