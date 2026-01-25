@@ -3,8 +3,8 @@ meta:
 units:
   kx: cx
   ky: cy
-  px: kx + 2
-  py: ky + 2
+  px: 0.65kx
+  py: 0.65ky
   $default_width: cx
   $default_height: cy
 points:
@@ -83,39 +83,68 @@ points:
             splay: -10
           
 outlines:
-  board:
+  keys:
     - what: rectangle
       where: true
-      size: [kx, ky]
+      size: [kx-0.01, ky-0.01]
+  board:
     - what: polygon
       operation: stack
-      points: 
+      points:
         - ref: matrix_outer_top
-          shift: [-0.6kx, 0.6ky]
+          shift: [-px, py]
         - ref: matrix_ring_top
-          shift: [-0.6kx, 0.6ky]
+          shift: [-px, py]
         - ref: matrix_middle_top
-          shift: [-0.6kx, 0.6ky]
+          shift: [-px, py]
         - ref: matrix_middle_top
-          shift: [0.6kx, 0.6ky]
+          shift: [px, py]
         - ref: matrix_index_top
-          shift: [0.6kx, 0.6ky]
+          shift: [px, py]
         - ref: matrix_inner_top
-          shift: [1.9kx, 0.6ky]
+          shift: [2.0kx, py]
         - ref: matrix_inner_top
-          shift: [1.9kx, -3.8ky]
+          shift: [2.0kx, -3.0ky]
         - ref: thumbtop_inner
-          shift: [0.6kx, -0.6ky]
+          shift: [px, py]
+        - ref: thumbtop_inner
+          shift: [px, -py]
         - ref: thumbbot_inner
-          shift: [0.6kx, -0.6ky]
+          shift: [px, -py]
         - ref: thumbbot_outer
-          shift: [-0.6kx, -0.6ky]
+          shift: [-px, -py]
         - ref: thumbtop_outer
-          shift: [-0.5kx, -0.6ky]
+          shift: [-px, -py]
         - ref: matrix_pinky_bottom
-          shift: [0.6kx, -0.6ky]
+          shift: [px, -py]
         - ref: matrix_outer_bottom
-          shift: [-0.6kx, -0.6ky]
-
+          shift: [-px, -py]
+      fillet: 5
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
 pcbs:
+  board:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
 cases:
