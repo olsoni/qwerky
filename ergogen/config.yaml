@@ -1,0 +1,49 @@
+meta:
+  engine: 4.1.0
+units:
+  kx: cx
+  ky: cy
+  px: kx + 2
+  py: ky + 2
+  $default_width: cx
+  $default_height: cy
+points:
+  zones:
+    matrix:
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        outer:
+          key:
+            splay: 12
+        pinky:
+          key:
+            stagger: 0.0ky
+            splay: 0
+        ring:
+          key:
+            stagger: 0.8ky
+            splay: -8
+            spread: 1.2kx
+        middle:
+          key:
+            stagger: 0.2ky
+            splay: -4
+            spread: 1.2kx
+        index:
+          key:
+            stagger: -0.2ky
+            splay: -4
+            spread: 1.2kx
+        inner:
+          key:
+            stagger: -0.0ky
+            splay: 0
+      rows:
+        bottom:
+        home:
+        top:
+outlines:
+pcbs:
+cases:
