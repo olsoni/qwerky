@@ -10,6 +10,8 @@ units:
 points:
   zones:
     matrix:
+      anchor:
+        shift: [150, -150]
       key:
         padding: 1ky
         spread: 1kx
@@ -140,11 +142,33 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
-        what: diode
+        what: diode_sod123
         where: true
         params:
+          reversible: true
+          include_traces_vias: true
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
+          shift:
+            [0, -5]
+      micro:
+        what: nicenano
+        params:
+          reversible: true
+          reverse_mount: true
+          include_traces: true
+        where:
+          ref: matrix_inner_top
+          shift: [1.2kx, -0.5ky]
+          rotate: 0
+      display:
+        what: niceview
+        params:
+          reversible: true
+          include_traces: true
+        where:
+          ref: matrix_inner_top
+          shift: [1.2kx, -0.7ky]
+          rotate: 0
 cases:
