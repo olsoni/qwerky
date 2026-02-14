@@ -18,43 +18,43 @@ points:
       columns:
         outer:
           key:
-            splay: 12
-            column_net: P0
+            splay: 16
+            column_net: P8
         pinky:
           key:
             stagger: 0.0ky
             splay: 0
-            column_net: P1
+            column_net: P9
         ring:
           key:
             stagger: 0.8ky
             spread: 1.2kx
             splay: -8
-            column_net: P2
+            column_net: P10
         middle:
           key:
             stagger: 0.2ky
             spread: 1.2kx
             splay: -4
-            column_net: P3
+            column_net: P14
         index:
           key:
             stagger: -0.2ky
             spread: 1.2kx
             splay: -4
-            column_net: P4
+            column_net: P15
         inner:
           key:
             stagger: -0.0ky
             splay: 0
-            column_net: P5
+            column_net: P16
       rows:
         bottom:
-          row_net: P6
+          row_net: P18
         home:
-          row_net: P7
+          row_net: P19
         top:
-          row_net: P8
+          row_net: P20
     thumbtop:
       key:
         padding: 1.1ky
@@ -62,49 +62,49 @@ points:
       anchor:
         ref: matrix_middle_bottom
         shift: [0.0kx, -1.5ky]
-      columns: 
-        outer:
+      columns:
+        tt_outer:
           key:
-            column_net: P0
-        middle:
-          key:
-            stagger: -0.1ky
-            splay: -10
-            column_net: P1
-        home:
+            column_net: P9
+        tt_middle:
           key:
             stagger: -0.1ky
             splay: -10
-            column_net: P2
-        inner:
+            column_net: P10
+        tt_home:
           key:
             stagger: -0.1ky
             splay: -10
-            column_net: P3
+            column_net: P15
+        tt_inner:
+          key:
+            stagger: -0.1ky
+            splay: -10
+            column_net: P16
       rows:
-        top:
-          row_net: P9
+        tt_top:
+          row_net: P21
     thumbbot:
       key:
         padding: 1.1ky
         spread: 1.12kx
       anchor:
-        ref: thumbtop_outer_top
+        ref: thumbtop_tt_outer_tt_top
         shift: [0.8kx, -1.2ky]
       columns:
-        outer:
+        tb_outer:
           key:
             splay: -10
-            column_net: P4
-        inner:
+            column_net: P8
+        tb_inner:
           key:
             stagger: -0.1ky
             splay: -10
-            column_net: P5
+            column_net: P14
       rows:
-        bot:
-          row_net: P9
-          
+        tb_bot:
+          row_net: P21
+
 outlines:
   keys:
     - what: rectangle
@@ -128,15 +128,15 @@ outlines:
           shift: [2.0kx, py]
         - ref: matrix_inner_top
           shift: [2.0kx, -3.0ky]
-        - ref: thumbtop_inner_top
+        - ref: thumbtop_tt_inner_tt_top
           shift: [px, py]
-        - ref: thumbtop_inner_top
+        - ref: thumbtop_tt_inner_tt_top
           shift: [px, -py]
-        - ref: thumbbot_inner_bot
+        - ref: thumbbot_tb_inner_tb_bot
           shift: [px, -py]
-        - ref: thumbbot_outer_bot
+        - ref: thumbbot_tb_outer_tb_bot
           shift: [-px, -py]
-        - ref: thumbtop_outer_top
+        - ref: thumbtop_tt_outer_tt_top
           shift: [-px, -py]
         - ref: matrix_pinky_bottom
           shift: [px, -py]
