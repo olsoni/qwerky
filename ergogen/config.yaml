@@ -19,33 +19,42 @@ points:
         outer:
           key:
             splay: 12
+            column_net: P0
         pinky:
           key:
             stagger: 0.0ky
             splay: 0
+            column_net: P1
         ring:
           key:
             stagger: 0.8ky
             spread: 1.2kx
             splay: -8
+            column_net: P2
         middle:
           key:
             stagger: 0.2ky
             spread: 1.2kx
             splay: -4
+            column_net: P3
         index:
           key:
             stagger: -0.2ky
             spread: 1.2kx
             splay: -4
+            column_net: P4
         inner:
           key:
             stagger: -0.0ky
             splay: 0
+            column_net: P5
       rows:
         bottom:
+          row_net: P6
         home:
+          row_net: P7
         top:
+          row_net: P8
     thumbtop:
       key:
         padding: 1.1ky
@@ -56,33 +65,45 @@ points:
       columns: 
         outer:
           key:
+            column_net: P0
         middle:
           key:
             stagger: -0.1ky
             splay: -10
+            column_net: P1
         home:
           key:
             stagger: -0.1ky
             splay: -10
+            column_net: P2
         inner:
           key:
             stagger: -0.1ky
             splay: -10
+            column_net: P3
+      rows:
+        top:
+          row_net: P9
     thumbbot:
       key:
         padding: 1.1ky
         spread: 1.12kx
       anchor:
-        ref: thumbtop_outer
+        ref: thumbtop_outer_top
         shift: [0.8kx, -1.2ky]
       columns:
         outer:
           key:
             splay: -10
+            column_net: P4
         inner:
           key:
             stagger: -0.1ky
             splay: -10
+            column_net: P5
+      rows:
+        bot:
+          row_net: P9
           
 outlines:
   keys:
@@ -107,15 +128,15 @@ outlines:
           shift: [2.0kx, py]
         - ref: matrix_inner_top
           shift: [2.0kx, -3.0ky]
-        - ref: thumbtop_inner
+        - ref: thumbtop_inner_top
           shift: [px, py]
-        - ref: thumbtop_inner
+        - ref: thumbtop_inner_top
           shift: [px, -py]
-        - ref: thumbbot_inner
+        - ref: thumbbot_inner_bot
           shift: [px, -py]
-        - ref: thumbbot_outer
+        - ref: thumbbot_outer_bot
           shift: [-px, -py]
-        - ref: thumbtop_outer
+        - ref: thumbtop_outer_top
           shift: [-px, -py]
         - ref: matrix_pinky_bottom
           shift: [px, -py]
