@@ -42,7 +42,7 @@
 //      or above 0.8 (KiCad default), to avoid overlap or DRC errors
 //    via_drill: default is 0.3
 //      allows to define the size of the drill. Not recommended below 0.3 (JLCPCB minimum),
-//      or above 0.4 (KiCad default), to avoid overlap or DRC errors 
+//      or above 0.4 (KiCad default), to avoid overlap or DRC errors
 //    locked_traces_vias: false
 //      sets the traces and vias as locked in KiCad. Locked objects may not be manipulated
 //      or moved, and cannot be selected unless the Locked Items option is enabled in the
@@ -51,10 +51,10 @@
 //      replaced.
 //    include_plated_holes: default is false
 //      Alternate version of the footprint compatible with side, reversible, hotswap, solder options in any combination.
-//      Pretty, allows for connecting ground fill zones via center hole, 
+//      Pretty, allows for connecting ground fill zones via center hole,
 //      allows for setting nets to Choc v2 stabilizers and them for your routing needs.
 //    include_stabilizer_nets: default is false
-//      if true, will add adjustable nets to choc v2 plated stabilizer holes, 
+//      if true, will add adjustable nets to choc v2 plated stabilizer holes,
 //      LEFTSTAB: default is "D1"
 //      RIGHTSTAB: default is "D2"
 //    include_centerhole_net: default is false
@@ -303,7 +303,7 @@ module.exports = {
 
     const hotswap_front_pads_plated = `
     (pad "1" smd roundrect (at 2.648 -5.95 ${p.r}) (size 3.8 2.15) (layers "F.Cu") (roundrect_rratio 0.1) ${p.from.str})
-    (pad "" smd roundrect (at 3.248 -5.95 ${p.r}) (size 2.6 2.15) (layers "F.Paste" "F.Mask") (roundrect_rratio 0.1)) 
+    (pad "" smd roundrect (at 3.248 -5.95 ${p.r}) (size 2.6 2.15) (layers "F.Paste" "F.Mask") (roundrect_rratio 0.1))
     (pad "2" smd roundrect (at ${-7.6475 + (2.6 - p.outer_pad_width_front) / 2} -3.75 ${p.r}) (size ${p.outer_pad_width_front + 1.2} 2.15) (layers "F.Cu") (roundrect_rratio 0.1) ${p.to.str})
     (pad "" smd roundrect (at ${-8.2475 + (2.6 - p.outer_pad_width_front) / 2} -3.75 ${p.r}) (size ${p.outer_pad_width_front} 2.15) (layers "F.Paste" "F.Mask") (roundrect_rratio ${(2.15 / p.outer_pad_width_front) <= 1 ? 0.1 : 0.1 * (2.15 / p.outer_pad_width_front)}))
     `
@@ -361,15 +361,15 @@ module.exports = {
     (fp_line (start 2 -7.7) (end 2 -6.78) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 2.52 -6.2) (end 7 -6.2) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 7 -6.2) (end 7 -5.6) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
-    (fp_arc (start 2.52 -6.2) (end 2 -6.78) (angle 90) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
-  
+    (fp_line (start 2.52 -6.2) (end 2 -6.78) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
+
     ${'' /* back bottom */}
     (fp_line (start -1.5 -3.7) (end -2 -4.2) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 0.8 -3.7) (end -1.5 -3.7) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 2.5 -1.5) (end 2.5 -2.2) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 7 -1.5) (end 2.5 -1.5) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 7 -2) (end 7 -1.5) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
-    (fp_arc (start 0.8 -3.7) (end 2.5 -2.22) (angle 90) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
+    (fp_line (start 0.8 -3.7) (end 2.5 -2.22) (layer "B.SilkS") (stroke (width 0.15) (type solid)))
 
     ${p.include_plated_holes ? `
     ${'' /* Side Hole */}
@@ -403,16 +403,16 @@ module.exports = {
     (fp_line (start -1.5 -8.2) (end -2 -7.7) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 1.5 -8.2) (end -1.5 -8.2) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 2 -7.7) (end 1.5 -8.2) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
-    (fp_arc (start -2 -6.78) (end -2.52 -6.2) (angle 90) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
-  
+    (fp_line (start -2 -6.78) (end -2.52 -6.2) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
+
     ${'' /* front bottom */}
     (fp_line (start -7 -1.5) (end -7 -2) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start -2.5 -1.5) (end -7 -1.5) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start -2.5 -2.2) (end -2.5 -1.5) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 1.5 -3.7) (end -0.8 -3.7) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
     (fp_line (start 2 -4.2) (end 1.5 -3.7) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
-    (fp_arc (start -2.5 -2.22) (end -0.8 -3.7) (angle 90) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
-    
+    (fp_line (start -2.5 -2.22) (end -0.8 -3.7) (layer "F.SilkS") (stroke (width 0.15) (type solid)))
+
     ${p.include_plated_holes ? `
     ${'' /* Side Hole */}
     ${p.reversible ? `
@@ -462,7 +462,7 @@ module.exports = {
     const solder_front = `
     (pad "1" thru_hole circle (at ${solder_offset_x_front}5 ${solder_offset_y}3.8 ${195 + p.r}) (size 2.032 2.032) (drill 1.27) (layers "*.Cu" "*.Mask") ${p.to.str})
     `
-    
+
     const solder_back = `
     (pad "1" thru_hole circle (at ${solder_offset_x_back}5 ${solder_offset_y}3.8 ${195 + p.r}) (size 2.032 2.032) (drill 1.27) (layers "*.Cu" "*.Mask") ${p.to.str})
     `
