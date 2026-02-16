@@ -163,8 +163,8 @@ pcbs:
           include_keycap: true
           keycap_width: kx
           keycap_height: ky
-          choc_v2_support: false
-          include_stabilizer_pad: false
+          choc_v2_support: true
+          include_stabilizer_pad: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
@@ -176,8 +176,8 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift:
-            [0, -5]
+          shift: [0, -5]
+          rotate: 180
       micro:
         what: nicenano
         params:
