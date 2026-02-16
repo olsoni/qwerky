@@ -179,6 +179,12 @@ pcbs:
           reversible: true
           reverse_mount: true
           include_traces: true
+          P5_label: P5
+          P6_label: P6
+          P7_label: P7
+          P5: MOSI
+          P6: SCK
+          P7: CS
         where:
           ref: matrix_inner_top
           shift: [1.2kx, -0.5ky]
