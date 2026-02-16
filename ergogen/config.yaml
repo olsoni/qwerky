@@ -1,0 +1,261 @@
+meta:
+  engine: 4.1.0
+units:
+  kx: cx
+  ky: cy
+  px: 0.65kx
+  py: 0.65ky
+  $default_width: cx
+  $default_height: cy
+points:
+  zones:
+    matrix:
+      anchor:
+        shift: [150, -150]
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        outer:
+          key:
+            splay: 16
+            column_net: P8
+        pinky:
+          key:
+            stagger: 0.0ky
+            splay: 0
+            column_net: P9
+        ring:
+          key:
+            stagger: 0.8ky
+            spread: 1.2kx
+            splay: -8
+            column_net: P10
+        middle:
+          key:
+            stagger: 0.2ky
+            spread: 1.2kx
+            splay: -4
+            column_net: P14
+        index:
+          key:
+            stagger: -0.2ky
+            spread: 1.2kx
+            splay: -4
+            column_net: P15
+        inner:
+          key:
+            stagger: -0.0ky
+            splay: 0
+            column_net: P16
+      rows:
+        bottom:
+          row_net: P18
+        home:
+          row_net: P19
+        top:
+          row_net: P20
+    thumbtop:
+      key:
+        padding: 1.1ky
+        spread: 1.12kx
+      anchor:
+        ref: matrix_middle_bottom
+        shift: [0.0kx, -1.5ky]
+      columns:
+        tt_outer:
+          key:
+            column_net: P9
+        tt_middle:
+          key:
+            stagger: -0.1ky
+            splay: -10
+            column_net: P10
+        tt_home:
+          key:
+            stagger: -0.1ky
+            splay: -10
+            column_net: P15
+        tt_inner:
+          key:
+            stagger: -0.1ky
+            splay: -10
+            column_net: P16
+      rows:
+        tt_top:
+          row_net: P21
+    thumbbot:
+      key:
+        padding: 1.1ky
+        spread: 1.12kx
+      anchor:
+        ref: thumbtop_tt_outer_tt_top
+        shift: [0.8kx, -1.2ky]
+      columns:
+        tb_outer:
+          key:
+            splay: -10
+            column_net: P8
+        tb_inner:
+          key:
+            stagger: -0.1ky
+            splay: -10
+            column_net: P14
+      rows:
+        tb_bot:
+          row_net: P21
+
+outlines:
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.01, ky-0.01]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_outer_top
+          shift: [-px, py]
+        - ref: matrix_ring_top
+          shift: [-px, py]
+        - ref: matrix_middle_top
+          shift: [-px, py]
+        - ref: matrix_middle_top
+          shift: [px, py]
+        - ref: matrix_index_top
+          shift: [px, py]
+        - ref: matrix_inner_top
+          shift: [2.0kx, py]
+        - ref: matrix_inner_top
+          shift: [2.0kx, -3.0ky]
+        - ref: thumbtop_tt_inner_tt_top
+          shift: [px, py]
+        - ref: thumbtop_tt_inner_tt_top
+          shift: [px, -py]
+        - ref: thumbbot_tb_inner_tb_bot
+          shift: [px, -py]
+        - ref: thumbbot_tb_outer_tb_bot
+          shift: [-px, -py]
+        - ref: thumbtop_tt_outer_tt_top
+          shift: [-px, -py]
+        - ref: matrix_pinky_bottom
+          shift: [px, -py]
+        - ref: matrix_outer_bottom
+          shift: [-px, -py]
+      fillet: 5
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
+pcbs:
+  board:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode_tht_sod123
+        where: true
+        params:
+          reversible: true
+          include_traces_vias: true
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift:
+            [0, -5]
+      micro:
+        what: nicenano
+        params:
+          reversible: true
+          reverse_mount: true
+          include_traces: true
+          P5_label: P5
+          P6_label: P6
+          P7_label: P7
+          P5: MOSI
+          P6: SCK
+          P7: CS
+        where:
+          ref: matrix_inner_top
+          shift: [1.2kx, -0.5ky]
+          rotate: 0
+      display:
+        what: niceview
+        params:
+          reversible: true
+          include_traces: true
+        where:
+          ref: matrix_inner_top
+          shift: [1.2kx, -0.7ky]
+          rotate: 0
+      battery_connector:
+        what: battery_connector_jst_ph_2
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [0.7kx, -0.3ky]
+          rotate: 90
+      power_switch:
+        what: power_switch_smd_side
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, -0.7ky]
+          rotate: 0
+      reset_switch:
+        what: reset_switch_smd_side
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, -1.3ky]
+          rotate: -90
+      mount_hole_0:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_pinky_top
+          shift: [0.0kx, 0.8ky]
+      mount_hole_1:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_ring_bottom
+          shift: [0.0kx, -1.2ky]
+      mount_hole_2:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_middle_top
+          shift: [0.7kx, 0.4ky]
+      mount_hole_3:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: thumbtop_tt_inner_tt_top
+          shift: [0.0kx, -1.0ky]
+      mount_hole_4:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, 0.0ky]
+
+cases:
