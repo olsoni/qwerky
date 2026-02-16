@@ -50,11 +50,11 @@ points:
             column_net: P16
       rows:
         bottom:
-          row_net: P18
-        home:
           row_net: P19
-        top:
+        home:
           row_net: P20
+        top:
+          row_net: P21
     thumbtop:
       key:
         padding: 1.1ky
@@ -83,7 +83,7 @@ points:
             column_net: P16
       rows:
         tt_top:
-          row_net: P21
+          row_net: P18
     thumbbot:
       key:
         padding: 1.1ky
@@ -103,7 +103,7 @@ points:
             column_net: P14
       rows:
         tb_bot:
-          row_net: P21
+          row_net: P18
 
 outlines:
   keys:
@@ -154,12 +154,15 @@ pcbs:
         outline: board
     footprints:
       choc_hotswap:
-        what: choc
+        what: switch_choc_v1_v2
         where: true
         params:
-          keycaps: true
-          reverse: true
+          reversible: true
           hotswap: true
+          include_traces_vias: true
+          include_keycap: true
+          keycap_width: kx
+          keycap_height: ky
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
