@@ -216,4 +216,40 @@ pcbs:
           ref: matrix_inner_bottom
           shift: [1.8kx, -1.3ky]
           rotate: -90
+      mount_hole_0:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_pinky_top
+          shift: [0.0kx, 0.8ky]
+      mount_hole_1:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_ring_bottom
+          shift: [0.0kx, -1.2ky]
+      mount_hole_2:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_middle_top
+          shift: [0.7kx, 0.4ky]
+      mount_hole_3:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: thumbtop_tt_inner_tt_top
+          shift: [0.0kx, -1.0ky]
+      mount_hole_4:
+        what: mounting_hole_plated
+        params:
+          drill: 2.2
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, 0.0ky]
+
 cases:
