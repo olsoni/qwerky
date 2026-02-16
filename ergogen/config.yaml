@@ -163,6 +163,8 @@ pcbs:
           include_keycap: true
           keycap_width: kx
           keycap_height: ky
+          choc_v2_support: false
+          include_stabilizer_pad: false
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:

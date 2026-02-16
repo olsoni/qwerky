@@ -282,7 +282,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -291,10 +291,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -508,7 +504,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -517,10 +513,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -734,7 +726,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -743,10 +735,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -960,7 +948,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -969,10 +957,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -1186,7 +1170,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -1195,10 +1179,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -1412,7 +1392,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -1421,10 +1401,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -1638,7 +1614,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 8) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 8) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -1647,10 +1623,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -1864,7 +1836,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 8) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 8) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -1873,10 +1845,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -2090,7 +2058,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 8) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 8) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -2099,10 +2067,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 8) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -2316,7 +2280,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 4) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 4) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -2325,10 +2289,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -2542,7 +2502,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 4) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 4) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -2551,10 +2511,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -2768,7 +2724,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 4) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 4) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -2777,10 +2733,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -2994,7 +2946,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -3003,10 +2955,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -3220,7 +3168,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -3229,10 +3177,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -3446,7 +3390,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -3455,10 +3399,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -3672,7 +3612,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -3681,10 +3621,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -3898,7 +3834,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -3907,10 +3843,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -4124,7 +4056,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 0) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 0) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -4133,10 +4065,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 0) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -4350,7 +4278,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 4) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 4) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -4359,10 +4287,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 4) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -4576,7 +4500,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -6) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -6) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -4585,10 +4509,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 -6) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -6) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -4802,7 +4722,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -4811,10 +4731,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 -16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -5028,7 +4944,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -26) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -26) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -5037,10 +4953,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 -26) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -26) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -5254,7 +5166,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -6) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -6) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -5263,10 +5175,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 -6) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -6) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
@@ -5480,7 +5388,7 @@
 
     
     
-    (pad "" np_thru_hole circle (at 0 0 -16) (size 5 5) (drill 5) (layers "*.Cu" "*.Mask"))
+    (pad "" np_thru_hole circle (at 0 0 -16) (size 3.4 3.4) (drill 3.4) (layers "*.Cu" "*.Mask"))
     
     
     
@@ -5489,10 +5397,6 @@
     
     
     (fp_rect (start 9 8.5) (end -9 -8.5) (layer "Dwgs.User") (stroke (width 0.15) (type solid)) (fill none))
-    
-    (pad "" thru_hole circle (at 5.00 5.15 -16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
-    
-    (pad "" thru_hole circle (at -5.00 5.15 -16) (size 1.9 1.9) (drill 1.6) (layers "*.Cu" "*.Mask") )
     
     
     
