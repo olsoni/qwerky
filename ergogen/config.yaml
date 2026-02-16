@@ -163,7 +163,7 @@ pcbs:
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
-        what: diode_sod123
+        what: diode_tht_sod123
         where: true
         params:
           reversible: true
@@ -192,4 +192,28 @@ pcbs:
           ref: matrix_inner_top
           shift: [1.2kx, -0.7ky]
           rotate: 0
+      battery_connector:
+        what: battery_connector_jst_ph_2
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [0.7kx, -0.3ky]
+          rotate: 90
+      power_switch:
+        what: power_switch_smd_side
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, -0.7ky]
+          rotate: 0
+      reset_switch:
+        what: reset_switch_smd_side
+        params:
+          reversible: true
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.8kx, -1.3ky]
+          rotate: -90
 cases:
