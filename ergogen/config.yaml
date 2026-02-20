@@ -125,9 +125,9 @@ outlines:
         - ref: matrix_index_top
           shift: [px, py]
         - ref: matrix_inner_top
-          shift: [2.0kx, py]
+          shift: [2.1kx, py]
         - ref: matrix_inner_top
-          shift: [2.0kx, -3.0ky]
+          shift: [2.1kx, -3.0ky]
         - ref: thumbtop_tt_inner_tt_top
           shift: [px, py]
         - ref: thumbtop_tt_inner_tt_top
@@ -176,8 +176,8 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0, -5]
-          rotate: 180
+          shift: [-8.275, -4]
+          rotate: 90
       micro:
         what: nicenano
         params:
@@ -201,7 +201,7 @@ pcbs:
           include_traces: true
         where:
           ref: matrix_inner_top
-          shift: [1.2kx, -0.7ky]
+          shift: [1.2kx, -0.735ky]
           rotate: 0
       battery_connector:
         what: battery_connector_jst_ph_2
@@ -217,7 +217,7 @@ pcbs:
           reversible: true
         where:
           ref: matrix_inner_bottom
-          shift: [1.8kx, -0.7ky]
+          shift: [1.9kx, -0.3ky]
           rotate: 0
       reset_switch:
         what: reset_switch_smd_side
@@ -225,7 +225,7 @@ pcbs:
           reversible: true
         where:
           ref: matrix_inner_bottom
-          shift: [1.8kx, -1.3ky]
+          shift: [1.9kx, -0.9ky]
           rotate: -90
       mount_hole_0:
         what: mounting_hole_plated
@@ -260,7 +260,7 @@ pcbs:
         params:
           drill: 2.2
         where:
-          ref: matrix_inner_bottom
-          shift: [1.8kx, 0.0ky]
+          ref: matrix_inner_top
+          shift: [1.87kx, 0.43ky]
 
 cases:
