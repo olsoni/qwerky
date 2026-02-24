@@ -179,7 +179,7 @@ pcbs:
           shift: [-8.275, -4]
           rotate: 90
       micro:
-        what: nicenano
+        what: mcu_nice_nano
         params:
           reversible: true
           reverse_mount: true
@@ -195,7 +195,7 @@ pcbs:
           shift: [1.2kx, -0.5ky]
           rotate: 0
       display:
-        what: niceview
+        what: display_nice_view
         params:
           reversible: true
           include_traces: true
