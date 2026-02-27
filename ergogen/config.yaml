@@ -27,19 +27,19 @@ points:
             column_net: P9
         ring:
           key:
-            stagger: 0.8ky
+            stagger: 1.1ky
             spread: 1.2kx
             splay: -8
             column_net: P10
         middle:
           key:
-            stagger: 0.2ky
+            stagger: 0.4ky
             spread: 1.2kx
             splay: -4
             column_net: P14
         index:
           key:
-            stagger: -0.2ky
+            stagger: -0.4ky
             spread: 1.2kx
             splay: -4
             column_net: P15
@@ -61,7 +61,7 @@ points:
         spread: 1.12kx
       anchor:
         ref: matrix_middle_bottom
-        shift: [0.0kx, -1.5ky]
+        shift: [0.2kx, -1.5ky]
       columns:
         tt_outer:
           key:
@@ -125,9 +125,9 @@ outlines:
         - ref: matrix_index_top
           shift: [px, py]
         - ref: matrix_inner_top
-          shift: [2.1kx, py]
+          shift: [2.3kx, py]
         - ref: matrix_inner_top
-          shift: [2.1kx, -3.0ky]
+          shift: [2.3kx, -3.0ky]
         - ref: thumbtop_tt_inner_tt_top
           shift: [px, py]
         - ref: thumbtop_tt_inner_tt_top
