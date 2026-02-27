@@ -207,6 +207,7 @@ pcbs:
         what: battery_connector_jst_ph_2
         params:
           reversible: true
+          trace_width: 0.5
         where:
           ref: matrix_inner_bottom
           shift: [0.7kx, -0.3ky]
