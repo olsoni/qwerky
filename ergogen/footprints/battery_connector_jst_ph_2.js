@@ -29,6 +29,10 @@
 //    trace_width: default is 0.250mm
 //      allows to override the trace width that connects the jumper pads to the connector
 //      pins. Not recommended to go below 0.25mm.
+//    via_size: default is 0.6
+//      allows to define the size of the vias used by the reversible 0603 outputs.
+//    via_drill: default is 0.3
+//      allows to define the drill size of the vias used by the reversible 0603 outputs.
 //    include_silkscreen: default is true
 //      if true it will include the silkscreen. Recommended to be true to ensure connector
 //      polarity is not reversed, which can lead to shorting and damage to the MCU
@@ -60,6 +64,8 @@ module.exports = {
     reversible: false,
     include_traces: true,
     trace_width: 0.250,
+    via_size: 0.6,
+    via_drill: 0.3,
     include_silkscreen: true,
     include_fabrication: true,
     include_courtyard: true,
@@ -156,156 +162,27 @@ module.exports = {
     const reversible_pads = `
         (pad "11" thru_hole oval (at -1 0 ${p.r}) (size 1.2 1.75) (drill 0.75) (layers "*.Cu" "*.Mask") ${local_nets[0].str})
         (pad "12" thru_hole oval (at 1 0 ${p.r}) (size 1.2 1.75) (drill 0.75) (layers "*.Cu" "*.Mask") ${local_nets[1].str})
-        (pad "21" smd custom (at -1 1.8 ${180 + p.r}) (size 0.1 0.1) (layers "F.Cu" "F.Mask" "F.Paste")
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0.4)
-                        (xy -0.6 0.4)
-                        (xy -0.6 0.2)
-                        (xy 0 -0.4)
-                        (xy 0.6 0.2)
-                    )   
-                    (width 0)
-                    (fill yes)
-                )
-            )
-            ${local_nets[0]}
-        )
-        (pad "31" smd custom (at -1 1.8 ${180 + p.r}) (size 0.1 0.1) (layers "B.Cu" "B.Mask" "B.Paste")
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0.4)
-                        (xy -0.6 0.4)
-                        (xy -0.6 0.2)
-                        (xy 0 -0.4)
-                        (xy 0.6 0.2)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-            ${local_nets[0]}
-        )
-        (pad "22" smd custom (at 1 1.8 ${180 + p.r}) (size 0.1 0.1) (layers "F.Cu" "F.Mask" "F.Paste")
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0.4)
-                        (xy -0.6 0.4)
-                        (xy -0.6 0.2)
-                        (xy 0 -0.4)
-                        (xy 0.6 0.2)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-            ${local_nets[1]}
-        )
-        (pad "32" smd custom (at 1 1.8 ${180 + p.r}) (size 0.1 0.1) (layers "B.Cu" "B.Mask" "B.Paste")
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0.4)
-                        (xy -0.6 0.4)
-                        (xy -0.6 0.2)
-                        (xy 0 -0.4)
-                        (xy 0.6 0.2)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-            ${local_nets[1]}
-        )
-        (pad "1" smd custom (at -1 2.816 ${180 + p.r}) (size 1.2 0.5) (layers "F.Cu" "F.Mask" "F.Paste") ${p.BAT_P.str}
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0)
-                        (xy -0.6 0)
-                        (xy -0.6 1)
-                        (xy 0 0.4)
-                        (xy 0.6 1)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-        )
-        (pad "1" smd custom (at 1 2.816 ${180 + p.r}) (size 1.2 0.5) (layers "B.Cu" "B.Mask" "B.Paste") ${p.BAT_P.str}
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0)
-                        (xy -0.6 0)
-                        (xy -0.6 1)
-                        (xy 0 0.4)
-                        (xy 0.6 1)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-        )
-        (pad "2" smd custom (at -1 2.816 ${180 + p.r}) (size 1.2 0.5) (layers "B.Cu" "B.Mask" "B.Paste") ${p.BAT_N.str}
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0)
-                        (xy -0.6 0)
-                        (xy -0.6 1)
-                        (xy 0 0.4)
-                        (xy 0.6 1)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            )
-        )
-        (pad "2" smd custom (at 1 2.816 ${180 + p.r}) (size 1.2 0.5) (layers "F.Cu" "F.Mask" "F.Paste") ${p.BAT_N.str}
-            (clearance 0.1) (zone_connect 0)
-            (options (clearance outline) (anchor rect))
-            (primitives
-                (gr_poly
-                    (pts
-                        (xy 0.6 0)
-                        (xy -0.6 0)
-                        (xy -0.6 1)
-                        (xy 0 0.4)
-                        (xy 0.6 1)
-                    )
-                    (width 0)
-                    (fill yes)
-                )
-            ) 
-        )
+        (pad "21" smd rect (at -1 2.0 ${180 + p.r}) (size 0.9 1.0) (layers "F.Cu" "F.Mask" "F.Paste") ${local_nets[0].str})
+        (pad "31" smd rect (at -1 2.0 ${180 + p.r}) (size 0.9 1.0) (layers "B.Cu" "B.Mask" "B.Paste") ${local_nets[0].str})
+        (pad "22" smd rect (at 1 2.0 ${180 + p.r}) (size 0.9 1.0) (layers "F.Cu" "F.Mask" "F.Paste") ${local_nets[1].str})
+        (pad "32" smd rect (at 1 2.0 ${180 + p.r}) (size 0.9 1.0) (layers "B.Cu" "B.Mask" "B.Paste") ${local_nets[1].str})
+        (pad "1" smd rect (at -1 3.6 ${180 + p.r}) (size 0.9 1.0) (layers "F.Cu" "F.Mask" "F.Paste") ${p.BAT_P.str})
+        (pad "1" smd rect (at 1 3.6 ${180 + p.r}) (size 0.9 1.0) (layers "B.Cu" "B.Mask" "B.Paste") ${p.BAT_P.str})
+        (pad "2" smd rect (at -1 3.6 ${180 + p.r}) (size 0.9 1.0) (layers "B.Cu" "B.Mask" "B.Paste") ${p.BAT_N.str})
+        (pad "2" smd rect (at 1 3.6 ${180 + p.r}) (size 0.9 1.0) (layers "F.Cu" "F.Mask" "F.Paste") ${p.BAT_N.str})
         `
     const standard_closing = `
     )
         `
 
     const reversible_traces = ` 
-    (segment (start ${p.eaxy(-1, 1.8)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[0].index}))
-    (segment (start ${p.eaxy(-1, 1.8)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "B.Cu") (net ${local_nets[0].index}))
-    (segment (start ${p.eaxy(1, 1.8)}) (end ${p.eaxy(1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[1].index}))
-    (segment (start ${p.eaxy(1, 1.8)}) (end ${p.eaxy(1, 0)}) (width ${p.trace_width}) (layer "B.Cu") (net ${local_nets[1].index}))
+    (segment (start ${p.eaxy(-1, 2.0)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[0].index}))
+    (segment (start ${p.eaxy(-1, 2.0)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "B.Cu") (net ${local_nets[0].index}))
+    (segment (start ${p.eaxy(1, 2.0)}) (end ${p.eaxy(1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[1].index}))
+    (segment (start ${p.eaxy(1, 2.0)}) (end ${p.eaxy(1, 0)}) (width ${p.trace_width}) (layer "B.Cu") (net ${local_nets[1].index}))
+    (segment (start ${p.eaxy(-1, 3.6)}) (end ${p.eaxy(0, 3.6)}) (width ${p.trace_width}) (layer "F.Cu") (net ${p.BAT_P.index}))
+    (segment (start ${p.eaxy(1, 3.6)}) (end ${p.eaxy(0, 3.6)}) (width ${p.trace_width}) (layer "B.Cu") (net ${p.BAT_P.index}))
+    (via (at ${p.eaxy(0, 3.6)}) (size ${p.via_size}) (drill ${p.via_drill}) (layers "F.Cu" "B.Cu") (net ${p.BAT_P.index}))
         `
 
     const battery_connector_3dmodel = `
@@ -357,4 +234,3 @@ module.exports = {
     return final;
   }
 }
-
