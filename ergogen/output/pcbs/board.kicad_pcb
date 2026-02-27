@@ -9415,7 +9415,7 @@
     (segment (start 261.5766853 120.74590079999999) (end 259.5766853 120.74590079999999) (width 0.5) (layer "B.Cu") (net 82))
     (segment (start 263.17668530000003 122.74590079999999) (end 263.17668530000003 121.74590079999999) (width 0.5) (layer "F.Cu") (net 80))
     (segment (start 263.17668530000003 120.74590079999999) (end 263.17668530000003 121.74590079999999) (width 0.5) (layer "B.Cu") (net 80))
-    (via (at 263.17668530000003 121.74590079999999) (size 0.6) (drill 0.3) (layers "F.Cu" "B.Cu") (net 80))
+    (via (at 263.17668530000003 121.74590079999999) (size 0.7) (drill 0.3) (layers "F.Cu" "B.Cu") (net 80))
         
 
   (footprint "ceoloide:power_switch_smd_side"

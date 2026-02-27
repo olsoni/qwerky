@@ -29,7 +29,7 @@
 //    trace_width: default is 0.250mm
 //      allows to override the trace width that connects the jumper pads to the connector
 //      pins. Not recommended to go below 0.25mm.
-//    via_size: default is 0.6
+//    via_size: default is 0.7
 //      allows to define the size of the vias used by the reversible 0603 outputs.
 //    via_drill: default is 0.3
 //      allows to define the drill size of the vias used by the reversible 0603 outputs.
@@ -64,7 +64,7 @@ module.exports = {
     reversible: false,
     include_traces: true,
     trace_width: 0.250,
-    via_size: 0.6,
+    via_size: 0.7,
     via_drill: 0.3,
     include_silkscreen: true,
     include_fabrication: true,
