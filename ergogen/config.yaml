@@ -27,19 +27,19 @@ points:
             column_net: P9
         ring:
           key:
-            stagger: 0.8ky
+            stagger: 1.1ky
             spread: 1.2kx
             splay: -8
             column_net: P10
         middle:
           key:
-            stagger: 0.2ky
+            stagger: 0.4ky
             spread: 1.2kx
             splay: -4
             column_net: P14
         index:
           key:
-            stagger: -0.2ky
+            stagger: -0.4ky
             spread: 1.2kx
             splay: -4
             column_net: P15
@@ -61,7 +61,7 @@ points:
         spread: 1.12kx
       anchor:
         ref: matrix_middle_bottom
-        shift: [0.0kx, -1.5ky]
+        shift: [0.2kx, -1.5ky]
       columns:
         tt_outer:
           key:
@@ -125,9 +125,9 @@ outlines:
         - ref: matrix_index_top
           shift: [px, py]
         - ref: matrix_inner_top
-          shift: [2.1kx, py]
+          shift: [2.3kx, py]
         - ref: matrix_inner_top
-          shift: [2.1kx, -3.0ky]
+          shift: [2.3kx, -3.0ky]
         - ref: thumbtop_tt_inner_tt_top
           shift: [px, py]
         - ref: thumbtop_tt_inner_tt_top
@@ -192,7 +192,7 @@ pcbs:
           P7: CS
         where:
           ref: matrix_inner_top
-          shift: [1.2kx, -0.5ky]
+          shift: [1.4kx, -0.5ky]
           rotate: 0
       display:
         what: display_nice_view
@@ -201,7 +201,7 @@ pcbs:
           include_traces: true
         where:
           ref: matrix_inner_top
-          shift: [1.2kx, -0.735ky]
+          shift: [1.4kx, -0.735ky]
           rotate: 0
       battery_connector:
         what: battery_connector_jst_ph_2
@@ -210,7 +210,7 @@ pcbs:
           trace_width: 0.5
         where:
           ref: matrix_inner_bottom
-          shift: [0.7kx, -0.3ky]
+          shift: [0.9kx, -0.3ky]
           rotate: 90
       power_switch:
         what: power_switch_smd_side
@@ -218,7 +218,7 @@ pcbs:
           reversible: true
         where:
           ref: matrix_inner_bottom
-          shift: [1.9kx, -0.3ky]
+          shift: [2.1kx, -0.3ky]
           rotate: 0
       reset_switch:
         what: reset_switch_smd_side
@@ -226,7 +226,7 @@ pcbs:
           reversible: true
         where:
           ref: matrix_inner_bottom
-          shift: [1.9kx, -0.9ky]
+          shift: [2.1kx, -0.9ky]
           rotate: -90
       mount_hole_0:
         what: mounting_hole_plated
@@ -248,7 +248,7 @@ pcbs:
           drill: 2.2
         where:
           ref: matrix_middle_top
-          shift: [0.7kx, 0.4ky]
+          shift: [0.8kx, 0.4ky]
       mount_hole_3:
         what: mounting_hole_plated
         params:
@@ -262,6 +262,6 @@ pcbs:
           drill: 2.2
         where:
           ref: matrix_inner_top
-          shift: [1.87kx, 0.43ky]
+          shift: [2.07kx, 0.43ky]
 
 cases:
