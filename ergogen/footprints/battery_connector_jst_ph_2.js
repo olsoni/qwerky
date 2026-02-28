@@ -29,9 +29,9 @@
 //    trace_width: default is 0.250mm
 //      allows to override the trace width that connects the jumper pads to the connector
 //      pins. Not recommended to go below 0.25mm.
-//    via_size: default is 0.7
+//    via_size: default is 0.8
 //      allows to define the size of the vias used by the reversible 0603 outputs.
-//    via_drill: default is 0.3
+//    via_drill: default is 0.4
 //      allows to define the drill size of the vias used by the reversible 0603 outputs.
 //    include_silkscreen: default is true
 //      if true it will include the silkscreen. Recommended to be true to ensure connector
@@ -64,8 +64,8 @@ module.exports = {
     reversible: false,
     include_traces: true,
     trace_width: 0.250,
-    via_size: 0.7,
-    via_drill: 0.3,
+    via_size: 0.8,
+    via_drill: 0.4,
     include_silkscreen: true,
     include_fabrication: true,
     include_courtyard: true,
@@ -175,7 +175,7 @@ module.exports = {
     )
         `
 
-    const reversible_traces = ` 
+    const reversible_traces = `
     (segment (start ${p.eaxy(-1, 2.0)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[0].index}))
     (segment (start ${p.eaxy(-1, 2.0)}) (end ${p.eaxy(-1, 0)}) (width ${p.trace_width}) (layer "B.Cu") (net ${local_nets[0].index}))
     (segment (start ${p.eaxy(1, 2.0)}) (end ${p.eaxy(1, 0)}) (width ${p.trace_width}) (layer "F.Cu") (net ${local_nets[1].index}))
