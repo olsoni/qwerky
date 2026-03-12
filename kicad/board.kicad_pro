@@ -231,7 +231,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "v2.kicad_pro",
+    "filename": "board.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -600,7 +600,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "qwerky-gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

@@ -73,9 +73,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "qwerky-gerbers/")
 		)
 	)
 	(net 0 "")
@@ -22114,6 +22114,58 @@
 		(layer "Edge.Cuts")
 		(uuid "fdec2468-0224-432b-9dde-623dbb586e1c")
 	)
+	(gr_text "qwerky v1.0"
+		(at 257.5 128.5 0)
+		(layer "F.SilkS")
+		(uuid "795e1618-a510-4683-bae4-0c31660cc714")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Isaac Olson"
+		(at 257.5 131.5 0)
+		(layer "F.SilkS")
+		(uuid "b9cfb657-5efe-43ba-a2a3-01384b427638")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "qwerky v1.0"
+		(at 271 128.5 0)
+		(layer "B.SilkS")
+		(uuid "592b8b7d-f676-4ad7-9be9-92f3a79c1c83")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Isaac Olson"
+		(at 271 131.5 0)
+		(layer "B.SilkS")
+		(uuid "c21d6c63-7414-428f-b446-b6b5bda36b51")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(segment
 		(start 142.13642 110.694883)
 		(end 140.713749 113.261449)
@@ -22825,7 +22877,7 @@
 		(uuid "705088cf-0d8b-4f0b-bf89-fe0f7f7942c6")
 	)
 	(via
-		(at 269.5 131.5)
+		(at 271 135)
 		(size 0.8)
 		(drill 0.4)
 		(layers "F.Cu" "B.Cu")
