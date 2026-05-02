@@ -29,9 +29,8 @@ current Ergogen/KiCad files.
 | Battery ground jumper / 0 ohm resistor | 2 | 0603 imperial / 1608 metric | Need to source | Fits the modified battery connector jumper pads. Buy extras. | [DigiKey: Bourns `CR0603-J/-000ELF`](https://www.digikey.com/en/products/detail/bourns-inc/CR0603-J-000ELF/3593211) |
 | EZ-Solder machine sockets and headers for nice!nano | 2 kits | 2.54mm pitch, 2 x 12-pin socket/header pairs per kit | Need to source | One kit per nice!nano. Solder the male headers to the nice!nano and the sockets to the PCB. Typeractive describes these as tall enough for 301230 batteries underneath while short enough for the nice!view to sit above. | [Typeractive: EZ-Solder Machine Sockets and Headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) |
 | 5-pin sockets for nice!view | 2 sockets | 2.54mm pitch, 5mm socket height | Need to source | One socket per display. Typeractive states these are 5mm tall; with the nice!view's 2mm pins, the display sits at about 7mm, which is intended to fit snugly over a socketed nice!nano. | [Typeractive: 5-Pin Sockets](https://typeractive.xyz/products/5-pin-sockets) |
-| M2 case screws | 10+ | M2 x 4mm and M2 x 5mm | Need to source | PCB has five 2.2mm plated mounting holes per half. Buy both 4mm and 5mm lengths until the printed stack height is final. Low-profile heads are preferred if available. | [McMaster: M2 socket head screws](https://www.mcmaster.com/products/socket-head-cap-screws/thread-size~m2/) |
-| M2 heat-set inserts | 10+ | M2 x 0.4mm, 3.4-4.1mm installed length | Need to source | One insert per PCB mounting point, plus extras for installation loss/testing. Reasonable case-model target: 3.3mm max hole diameter, 5mm boss OD. | [McMaster: heat-set inserts, choose M2 x 0.4mm](https://www.mcmaster.com/products/heat-set-inserts) |
-| Low-profile tripod threaded insert | 2 | 1/4-20 UNC | Need to source | Standard camera tripod thread is 1/4-20 UNC. Use one low-profile heat-set or embedded threaded insert on the back of each half. Reasonable case-model target: 0.300in installed length, 0.319in max hole diameter. | [McMaster: heat-set inserts, choose 1/4-20 x 0.300in](https://www.mcmaster.com/products/heat-set-inserts); [E-Z LOK flush insert option `240-4-BR`](https://www.ezlok.com/ezpress-insert-240-4-BR) |
+| M2 case screws and nuts | 10+ each | M2 screw kit | Already found / need to acquire | Use the large Amazon M2 screw/nut kit. Design the case around captive M2 nuts instead of heat-set inserts. PCB has five 2.2mm plated mounting holes per half. | User-selected Amazon kit |
+| Low-profile tripod captive nut | 2 | 1/4-20 UNC thin hex/jam nut | Need to source | Standard camera tripod thread is 1/4-20 UNC. Use one captive thin-profile hex nut in the back of each half. Reasonable model target: 7/16in across flats, 5/32in nut height, hex pocket plus clearance. | [McMaster: 1/4-20 thin-profile hex nuts](https://www.mcmaster.com/products/jam-nuts/thread-size~1-4-20/) |
 
 ## PCB-Derived Counts
 
@@ -48,8 +47,8 @@ current Ergogen/KiCad files.
 
 ## Open Decisions Before Ordering
 
-- Final M2 screw length, to be chosen after the 3D printed case geometry is drafted. Buying both M2 x 4mm and M2 x 5mm is reasonable.
-- Final tripod insert choice. The McMaster 1/4-20 x 0.300in heat-set insert is the lowest-profile target found so far; E-Z LOK press inserts are easier to source individually but are deeper.
+- Final M2 screw length, to be chosen after the 3D printed case geometry is drafted. The Amazon screw kit should cover several lengths.
+- Final tripod captive nut choice. A 1/4-20 thin-profile hex/jam nut is the preferred low-profile direction unless testing shows pullout or spin resistance is inadequate.
 
 ## Header Notes
 
@@ -72,8 +71,10 @@ current Ergogen/KiCad files.
 
 - The planned case is 3D printed and should use M2 hardware.
 - The PCB has five 2.2mm plated mounting holes per half, so the full split needs ten M2 mounting points.
-- Add M2 heat-set inserts for the printed case.
-- Add a low-profile 1/4-20 UNC threaded insert or heat-set insert for a standard tripod mount on the back of each half.
+- Use captive M2 nuts in the printed case instead of M2 heat-set inserts.
+- For the tripod mount, use a captive 1/4-20 UNC thin-profile hex/jam nut on the back of each half.
+- Reasonable 1/4-20 captive-nut model target: 7/16in across flats, 5/32in nut height, 0.2-0.3mm pocket clearance, at least 1.5-2.0mm plastic retaining lip between the nut and the outside face, and a 12-14mm reinforced boss area around the nut.
+- The hex pocket prevents rotation; the retaining lip or a printed cover/inside wall must prevent the nut from pulling out.
 
 ## Fuse Notes
 
