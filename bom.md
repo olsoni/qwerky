@@ -27,8 +27,8 @@ current Ergogen/KiCad files.
 | Battery connector | 2 | JST PH 2.0mm, 2-pin, through-hole | Need to source | JST `S2B-PH-K-S`, right-angle through-hole PH header. Buy extras. | [DigiKey: `S2B-PH-K-S`](https://www.digikey.com/en/products/detail/jst-sales-america-inc/S2B-PH-K-S/926626) |
 | Battery positive PTC fuse | 2 | 0603 imperial / 1608 metric | Need to source | Fits the modified battery connector jumper pads. Best found part so far is Eaton `PTS06039V016`: 160mA hold, 400mA trip, 9V, 0603. This leaves margin above the nice!nano default 100mA charge current while staying low enough to react to battery/board faults. | [DigiKey: Eaton `PTS06039V016`](https://www.digikey.com/en/products/detail/eaton-electronics-division/PTS06039V016/15193468) |
 | Battery ground jumper / 0 ohm resistor | 2 | 0603 imperial / 1608 metric | Need to source | Fits the modified battery connector jumper pads. Buy extras. | [DigiKey: Bourns `CR0603-J/-000ELF`](https://www.digikey.com/en/products/detail/bourns-inc/CR0603-J-000ELF/3593211) |
-| Standard female socket header for nice!nano | 4 x 12-pin rows | 2.54mm pitch | Need to source | Two 12-pin female rows per MCU, four rows total for the split. Use standard-height headers so the smaller 301230 battery can fit under the MCU. | [DigiKey: Sullins `PPTC121LFBN-RC`](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC121LFBN-RC/807231) |
-| Standard female socket header for nice!view | 2 x 5-pin rows | 2.54mm pitch | Need to source | One 5-pin female row per display. Match the standard header style used for the nice!nano. | [DigiKey: Samtec `SSW-105-01-F-S`](https://www.digikey.com/en/products/detail/samtec-inc/SSW-105-01-F-S/6678759) |
+| EZ-Solder machine sockets and headers for nice!nano | 2 kits | 2.54mm pitch, 2 x 12-pin socket/header pairs per kit | Need to source | One kit per nice!nano. Solder the male headers to the nice!nano and the sockets to the PCB. Typeractive describes these as tall enough for 301230 batteries underneath while short enough for the nice!view to sit above. | [Typeractive: EZ-Solder Machine Sockets and Headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) |
+| 5-pin sockets for nice!view | 2 sockets | 2.54mm pitch, 5mm socket height | Need to source | One socket per display. Typeractive states these are 5mm tall; with the nice!view's 2mm pins, the display sits at about 7mm, which is intended to fit snugly over a socketed nice!nano. | [Typeractive: 5-Pin Sockets](https://typeractive.xyz/products/5-pin-sockets) |
 | M2 case screws | 10+ | M2 x 4mm and M2 x 5mm | Need to source | PCB has five 2.2mm plated mounting holes per half. Buy both 4mm and 5mm lengths until the printed stack height is final. Low-profile heads are preferred if available. | [McMaster: M2 socket head screws](https://www.mcmaster.com/products/socket-head-cap-screws/thread-size~m2/) |
 | M2 heat-set inserts | 10+ | M2 x 0.4mm, 3.4-4.1mm installed length | Need to source | One insert per PCB mounting point, plus extras for installation loss/testing. Reasonable case-model target: 3.3mm max hole diameter, 5mm boss OD. | [McMaster: heat-set inserts, choose M2 x 0.4mm](https://www.mcmaster.com/products/heat-set-inserts) |
 | Low-profile tripod threaded insert | 2 | 1/4-20 UNC | Need to source | Standard camera tripod thread is 1/4-20 UNC. Use one low-profile heat-set or embedded threaded insert on the back of each half. Reasonable case-model target: 0.300in installed length, 0.319in max hole diameter. | [McMaster: heat-set inserts, choose 1/4-20 x 0.300in](https://www.mcmaster.com/products/heat-set-inserts); [E-Z LOK flush insert option `240-4-BR`](https://www.ezlok.com/ezpress-insert-240-4-BR) |
@@ -53,9 +53,20 @@ current Ergogen/KiCad files.
 
 ## Header Notes
 
-- Use standard 2.54mm female headers for MCU and display socketing.
-- Standard headers are preferred over machine-pin sockets to leave room for the smaller 301230 battery under the MCU and to work with common square header pins.
-- Confirm installed header height against the 301230 battery thickness during case design.
+- The nice!view footprint overlaps the nice!nano footprint in XY, so the display must sit above the MCU.
+- Use Typeractive EZ-Solder Machine Sockets and Headers for the nice!nanos instead of standard square-pin female headers. They are designed for this exact stack: a 301230 battery under a socketed nice!nano with a nice!view above.
+- Use Typeractive 5-pin sockets for the nice!views. Typeractive states the socket is 5mm tall and the nice!view pin adds about 2mm, putting the nice!view at about 7mm.
+- This should be lower than the previous 8.51mm standard-header plan while still preserving the intended nice!view-over-nice!nano clearance.
+- Confirm installed socket/header height against the 301230 battery thickness during case design.
+
+### Header Alternatives
+
+| Option | Quantity | Estimated part cost | Notes | Supplier link |
+| --- | ---: | ---: | --- | --- |
+| Typeractive EZ-Solder nice!nano kits | 2 kits | About $18 total | Recommended for convenience. Includes captured male/female machine header pairs for two nice!nanos. | [Typeractive: EZ-Solder Machine Sockets and Headers](https://typeractive.xyz/products/ez-machine-sockets-and-headers) |
+| DigiKey Mill-Max loose-pin nice!nano socketing | 4 socket strips + 50 pins | About $10.10 total | Cheaper, but uses loose pins instead of captured male headers. Use 4 x 12-position Mill-Max 310 socket strips plus 48 pins, or 50 pins to allow two spares. | [DigiKey: Mill-Max `310-47-112-41-001000`](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/310-47-112-41-001000/7364039), [DigiKey: Mill-Max `3320-0-00-15-00-00-03-0`](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/3320-0-00-15-00-00-03-0/4147392) |
+| DigiKey captured machine-header style | 4 sockets + 4 headers | About $25.96 total | Not cheaper than Typeractive. Uses 4 x Mill-Max-compatible 12-position sockets and 4 x 12-position 335-series male headers. | [DigiKey: `315-43-112-41-003000`](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/315-43-112-41-003000/4455232), [DigiKey: `335-40-112-00-160000`](https://www.digikey.com/en/products/detail/digikey-va/335-40-112-00-160000/4455913) |
+| Typeractive nice!view 5-pin sockets | 2 sockets | $1 total | Recommended. DigiKey through-hole alternatives found so far are either taller, lower than the intended 7mm display height, surface-mount, or more expensive. | [Typeractive: 5-Pin Sockets](https://typeractive.xyz/products/5-pin-sockets) |
 
 ## Case Hardware Notes
 
