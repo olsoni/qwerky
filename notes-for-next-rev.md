@@ -1,0 +1,1 @@
+- put a drill hole near the battery connector so I could route the battery wire from the back up to the front. That'd make it easier to change between large and small battery
